@@ -88,12 +88,7 @@ public class GridGen : MonoBehaviour
             }
         }
         node.SetActive(false);
-        foreach (var i in gridMatrix)
-        { foreach (var j in i)
-            {
-                j.SetMaterial();
-            }
-        }
+        
         return gridMatrix;
     }
 

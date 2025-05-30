@@ -26,7 +26,7 @@ public class Node : MonoBehaviour
     public void SetWeight(int startWeight)
     { 
         baseWeight = startWeight;
-        
+        SetMaterial();
 
     }
 
@@ -41,13 +41,13 @@ public class Node : MonoBehaviour
 
         Debug.Log(material.ToString());
 
-        if (baseWeight < 7)
+        if (baseWeight > 7)
         {
-            material.SetInteger("IsAccessible", 0);
+            material.SetInt("_IsAccessible", 0);
         }
         else
         {
-            material.SetFloat("Weight", baseWeight);
+            material.SetFloat("_Weight_1", baseWeight);
         }
     }
 }
