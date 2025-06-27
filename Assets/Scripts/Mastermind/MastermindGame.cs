@@ -9,7 +9,7 @@ public class MastermindGame : MonoBehaviour
 
     Colors[] colorList = { Colors.Red, Colors.Green, Colors.Blue, Colors.Yellow, Colors.Brown, Colors.Orange, Colors.Black, Colors.White };
     LinkedList<Colors> selectedColors = new LinkedList<Colors>();
-    bool win= false;
+    public bool win= false;
     int tryCounter = 0;
     int winCounter = 0;
     int loseCounter = 0;
