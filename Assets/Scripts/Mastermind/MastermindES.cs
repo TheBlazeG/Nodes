@@ -73,7 +73,7 @@ public class MastermindES : MonoBehaviour
                                 {
                                     case 4:
                                         return;
-                                        break;
+                                        
                                     case 3:
                                         colorTry[3] = colorList[curIndex + 5];
                                         inPlace = 0;
