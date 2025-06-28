@@ -10,7 +10,7 @@ public class MastermindGame : MonoBehaviour
     Colors[] colorList = { Colors.Red, Colors.Green, Colors.Blue, Colors.Yellow, Colors.Brown, Colors.Orange, Colors.Black, Colors.White };
     LinkedList<Colors> selectedColors = new LinkedList<Colors>();
     public bool win= false;
-    int tryCounter = 0;
+    public int tryCounter = 0;
     int winCounter = 0;
     int loseCounter = 0;
     float winPercent;
@@ -78,7 +78,7 @@ public class MastermindGame : MonoBehaviour
         win = true;
         foreach (int guess in  result)
         {
-            if (guess!=4)
+            if (guess!=2)
             {
                 win = false; break;
             }
