@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MastermindES : MonoBehaviour
 {
-    MastermindGame game;
+    [SerializeField]MastermindGame game;
     Colors notColor = Colors.notColor;
     List<Colors> correctColors= new List<Colors>();
     Colors[] colorList = { Colors.Red, Colors.Green, Colors.Blue, Colors.Yellow, Colors.Brown, Colors.Orange, Colors.Black, Colors.White };
@@ -37,6 +37,7 @@ public class MastermindES : MonoBehaviour
             while (colorTry.Count < 4)
             {
                 colorTry.Add(item);
+            }
                 result = game.TrySolve(colorTry);
                 notColor = item;
                 foreach (var i in result)
@@ -499,7 +500,7 @@ public class MastermindES : MonoBehaviour
                     
                 }
                 
-            }
+            
         }
         if (!game.win)
         {

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MastermindGame : MonoBehaviour
@@ -14,6 +15,7 @@ public class MastermindGame : MonoBehaviour
     int winCounter = 0;
     int loseCounter = 0;
     float winPercent;
+    public TextMeshPro winPercentText;
 
     private void Start()
     {
@@ -87,17 +89,20 @@ public class MastermindGame : MonoBehaviour
        if (win)
         {
             winCounter++;
-            winPercent = (winCounter) / winCounter + loseCounter;
+            winPercent = (float)winCounter / (float)winCounter + (float)loseCounter;
+            winPercentText.text= winPercent.ToString();
         }
-        else if (tryCounter == 4)
+        else if (tryCounter == 10)
         {
             tryCounter = 00;
             loseCounter++;
-            winPercent = (winCounter) / winCounter + loseCounter;
+            winPercent = (float)winCounter / (float)winCounter + (float)loseCounter;
+            winPercentText.text = winPercent.ToString();
+
         }
 
-        
-        
+
+
         return result;
     }
 }
